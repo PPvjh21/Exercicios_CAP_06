@@ -25,7 +25,6 @@ while True:
                     lista.append(a)
             except ValueError:
                 print("Sorry, I didn't understand that!")
-
         elif len(lista) == 10:
             print(lista)
             soma = sum(lista)
