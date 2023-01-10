@@ -1,0 +1,34 @@
+"""
+07 - Faça um programa que leia 10 inteiros positivos, ignorando não positivos, e imprima sua média.
+"""
+while True:
+    lista = []
+    try:
+        b = int(input('Add your first value to sum: '))
+        if b < 0:
+            print('Negative integers are invalid!')
+            continue
+        else:
+            lista.append(b)
+    except ValueError:
+        print("Sorry, I didn't understand that!")
+        continue
+    i = True
+    while i is True:
+        x = len(lista)
+        if x < 10:
+            try:
+                a = int(input("Add one more value: "))
+                if a < 0:
+                    print('Negative integers are invalid!')
+                else:
+                    lista.append(a)
+            except ValueError:
+                print("Sorry, I didn't understand that!")
+
+        elif len(lista) == 10:
+            print(lista)
+            soma = sum(lista)
+            average = soma/len(lista)
+            print(average)
+            i = False
