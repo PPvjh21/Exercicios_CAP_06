@@ -31,3 +31,28 @@ while True:
             average = soma/len(lista)
             print(average)
             i = False
+
+"""
+08 - Escreva um programa que leia 10 números e escreva o menor valor lido e o maior valor lido.
+"""
+while True:
+    lista = []
+    try:
+        lista = [int(input('Add your first value: '))]
+    except ValueError:
+        print("Sorry, I didn't understand that!")
+        continue
+    i = True
+    while i is True:
+        x = len(lista)
+        if x < 10:
+            try:
+                lista.append(int(input("Add one more value: ")))
+            except ValueError:
+                print("Sorry, I didn't understand that!")
+        elif len(lista) == 10:
+            print(lista)
+            lista.sort()
+            print(lista)
+            print(lista[0], lista[-1])
+            i = False
