@@ -26,7 +26,6 @@ while True:
             except ValueError:
                 print("Sorry, I didn't understand that!")
         elif len(lista) == 10:
-            print(lista)
             soma = sum(lista)
             average = soma/len(lista)
             print(average)
@@ -51,8 +50,6 @@ while True:
             except ValueError:
                 print("Sorry, I didn't understand that!")
         elif len(lista) == 10:
-            print(lista)
             lista.sort()
-            print(lista)
-            print(lista[0], lista[-1])
+            print(f' The smallest and greatest numbers are {lista[0]} and {lista[-1]}')
             i = False
